@@ -22,3 +22,18 @@ How many months will it take him to pay off the car.  How much interest has he p
 He will have paid 21711.60 in interest
 """
 
+L = int(input("What amount was the loan: "))
+I = float(input("What is the monthly amount of interest: "))
+A = int(input("what's your monthly payment: "))
+I = float(I/100)
+interestfinal = 0
+time=0
+print(L,A,I)
+while L > 0 :
+    interest = L*I
+    L = L-A    
+    L= L+interest
+    interestfinal = interest + interestfinal
+    time = time +1
+
+print(f"you will pay ${round(interestfinal,2)} in interest over {time} months")

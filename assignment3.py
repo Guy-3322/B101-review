@@ -22,3 +22,17 @@ rate: 5%
 10 years
 final balance: 1320.68
 """
+
+I = float(input("What is the annual amount invested: "))
+Y = float(input("What is the yearly investment rate as a percent: "))
+T = int(input("How many years is the investment going for: "))
+P= Y/100
+year = 0
+invst = 0
+total = 0
+while year < T:
+    invst = total+I
+    interest = invst*P
+    total = invst+interest
+    year = year+1
+print(round(total,2))
